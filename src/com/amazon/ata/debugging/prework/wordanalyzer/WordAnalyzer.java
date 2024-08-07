@@ -47,7 +47,7 @@ public class WordAnalyzer {
     public char firstMultipleCharacter() {
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
-            if (find(ch, i) >= 0) {
+            if (find(ch, i) >= 1) {
                 return ch;
             }
         }
@@ -62,7 +62,7 @@ public class WordAnalyzer {
      * @return -1 if c is not found, or the index >= start where it occurs.
      */
     private int find(char c, int start) {
-        for (int i = start; i < word.length(); i++) {
+        for (int i = start + 1; i < word.length(); i++) {
             if (word.charAt(i) == c) {
                 return i;
             }
