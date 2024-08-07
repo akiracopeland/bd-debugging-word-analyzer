@@ -25,7 +25,7 @@ public class WordAnalyzer {
      * @return the first repeated character, or 0 if none found.
      */
     public char firstRepeatedCharacter() {
-        for (int i = 1; i < word.length() - 1; i++) {
+        for (int i = 0; i < word.length() - 1; i++) {
             char current = word.charAt(i);
             char adjacent = word.charAt(i + 1);
             if (current == adjacent) {
